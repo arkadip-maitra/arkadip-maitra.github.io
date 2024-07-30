@@ -72,17 +72,17 @@
                  I have worked on self supervised learning and writer identification with <a href="https://sadimanna.github.io/">Siladittya Manna</a>, 
                  Senior Research Fellow at Computer Vision and Pattern Recognition Unit, Indian Statistical Institute, 
                  Kolkata under the guidance of <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a> and
-                  <a href="https://www.iitkgp.ac.in/department/EC/faculty/ec-saumik">Saumik Bhattacharya</a>. 
+                  <a href="https://www.iitkgp.ac.in/department/EC/faculty/ec-saumik">Prof. Saumik Bhattacharya</a>. 
                   I have also worked on earthquake early warning system under the guidance of <a href="https://sites.google.com/caluniv.ac.in/amlanc-org">Prof. Amlan Chakrabarti</a>, 
                   Professor and Director, A.K. Choudhury School of Information Technology, University of Calcutta.
-                  I did my B.Sc from <a href="https://www.rkmvccrahara.org/">RKMVCC</a>, Rahara and M.Sc from
-                   <a href="https://rkmvu.ac.in/">RKMVERI</a>, Belur in Computer Science.
+                  I did my B.Sc in Computer Science from <a href="https://www.rkmvccrahara.org/">RKMVCC</a>, Rahara. and M.Sc in Computer Science from
+                   <a href="https://rkmvu.ac.in/">RKMVERI</a>, Belur.
               </p>
             </td>
           </tr>
         </tbody></table>
 	
-<!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
   <tr>
   <td style="padding:20px;width:100%;vertical-align:middle">
     <heading>Experience</heading>
@@ -94,40 +94,116 @@
 
   <tr>
     <td style="padding:20px;width:75%;vertical-align:middle">
-      <a href="https://arxiv.org/abs/2407.14224">
-        <papertitle>Associate Data Scientist</papertitle>
+      <a href="https://www.prediqt.it/">
+        <papertitle>PrediQt</papertitle>
       </a>
       <br>
-      <a href="https://www.linkedin.com/in/suvajit-patra">Suvajit Patra</a>
-      <strong>Arkadip Maitra</strong>,
-      Megha Tiwari,
-      K. Kumaran,
-      Swathy Prabhu,
-      Swami Punyeshwarananda,
-      <a href="https://cs.rkmvu.ac.in/~soumitra/">Soumitra Samanta</a> <br>
-      <em>Under Review</em>
+      <strong>Associate Data Scientist  </strong>,
+      <em>July 2023 - Present</em>
+      <ul>
+        <li> Finetuning open llms for particular tasks that enables better commerce. Tasks like categorization, description generation from product
+           title and images, filtering input query, relevant product identification based on retrived context, etc.
+           The finetuning was done based on cached previous user interaction data.
+        <li> A complete shopping assistant solution that can be integrated to organization. This solution can answer questions from any dcoument or
+           recommend products and answer questions about those products. This solution can any number of question on the specifics of any product or normal informative question.
+           It is a RAG based solution using fastapi. The solution is robust and modularized for quick deployment
+           to any potential client. <a href="https://sky.dev.eu2.rezolve.com/">[DEMO]</a> </li>
+        <li> A virtual realestate agent that answer user's query and recommends them properties across united states from our catalogue of 1.4M properties.
+           It is a RAG based solution. It is a specific location solution that pinpoints properties
+           according to user query location. The query classification, location specific filtering and property retrival is done in under 4 seconds
+           after which final answer streaming starts. User's natural language is used to extract location and property variants to answer question seamlesly. 
+          <a href="https://www.rezolve.com/real-estate/">[RealEstate]</a> </li>
+        <li> A virtual shopping asistant that answer user's query and recommends them products from our product data.
+           It is a RAG based solution. The query classification, product retrival is done under 3 seconds
+            after answer streaming starts. Negation handling and filtering by brands based on user natural language query is implemented.
+           <a href="https://www.rezolve.com/view-brain-demo-stores/">[DEMO]</a> </li>
+        <li> Created a impercetible document watermarking solution. A document specific finetune of
+           <a href="https://www.matthewtancik.com/stegastamp">Stegastamp</a> was used.
+           Achived a decryption accuracy of <b>87%</b> on well lit watermarked RGB documents when tested with 30 samples.
+           This solution was delivered to client for testing.</li>
+      </ul>
       <br>
-      <a href="https://arxiv.org/pdf/2407.14224"><span><i class="ai ai-arxiv"></i></span>arXiv</a><b>/</b>
-      <a href="https://cs.rkmvu.ac.in/~isl/">Demo</a>
-      <p></p>
-      <p>
-        Automatic Sign Language (SL) recognition is an important task in the computer vision community. 
-        To build a robust SL recognition system, we need a considerable amount
-        of data which is lacking particularly in Indian sign language (ISL). 
-        In this paper, we propose a large-scale isolated ISL dataset and a novel SL recognition model based
-        on skeleton graph structure. The dataset covers 2,002 daily used common words in the deaf community recorded
-        by 20 (10 male and 10 female) deaf adult signers (contains 40033 videos). We propose a SL recognition model
-        namely Hierarchical Windowed Graph Attention Network (HWGAT) by utilizing the human upper body skeleton graph
-        structure. The HWGAT tries to capture distinctive motions by giving attention to different body parts induced by the
-        human skeleton graph structure. The utility of the proposed dataset and the usefulness of our model are evaluated through extensive experiments. 
-        We pre-trained the proposed model on the proposed dataset and fine-tuned it across different sign language datasets further boosting
-        the performance of 1.10, 0.46, 0.78, and 6.84 percentage points on INCLUDE, LSA64, AUTSL and
-        WLASL respectively compared to the existing stateof-the-art skeleton-based models. The proposed dataset
-        and the model implementation  will be available at
-        https://cs.rkmvu.ac.in/~isl.
-      </p>
+      <strong>Data Analyst Intern  </strong>,
+      <em>Feb 2023 - June 2023</em>
+      <ul>
+        <li> Predicting Jira supoort ticket volume raised on any particular date. Timeseries Prediction problem.
+             Various models like Prophet, LSTM and Transformer were tested. A transformer variant achieved lowest MSE of <b>0.27</b>.
+             This solution is used internally for adressing staffing requirements based on predicted ticket volume.
+        </li>
+      </ul>
     </td>
-  </tr> -->
+  </tr>
+
+  <tr>
+    <td style="padding:20px;width:75%;vertical-align:middle">
+      <a href="https://cs.rkmvu.ac.in/">
+        <papertitle>Ramakrishna Mission Vivekananda Educational and Research Institute</papertitle>
+      </a>
+      <br>
+      <strong>Associate Researcher, Department of Computer Science  </strong>,
+      <em>Nov 2023 - Present</em>
+      <ul>
+        <li> A Sign Language generation system. Generates sign video from input text.
+        </li>
+        <li> A robust Sign Language recognition system. Built on mediapipe keypoints extracted from any input video.
+             Our proposed Hierarchical Windowed Graph Attention Network outperforms all other existing comparable models across various datasets.
+             <a href="https://cs.rkmvu.ac.in/~isl/">[DEMO]</a> <b>/</b> <a href="https://arxiv.org/abs/2407.14224">[PAPER]</a>
+        </li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="padding:20px;width:75%;vertical-align:middle">
+      <a href="https://cvpru.isical.ac.in/">
+        <papertitle>ISI Kolkata</papertitle>
+      </a>
+      <br>
+      <strong>Associate Researcher, Computer Vision and Pattern Recognition Unit</strong>,
+      <em>Oct 2022 - Oct 2023</em>
+      <ul>
+        <li> A decorrelation-based paradigm of self-supervised learning and apply the same to learning disentangled stroke features
+           for writer identification. Achieved results on par with various supervised models and better results compared to
+            existing self supervised loss functions.
+        </li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="padding:20px;width:75%;vertical-align:middle">
+      <a href="https://www.caluniv.ac.in/academic/akcsit/AKC.html">
+        <papertitle>A. K. Choudhury School of Information Technology, University of Calcutta</papertitle>
+      </a>
+      <br>
+      <strong>Associate Researcher, Department of Information Technology</strong>,
+      <em>Feb 2021 - Dec 2022</em>
+      <ul>
+        <li> Earthquake Early Warning (EEW) system using various classical ML models. This solution works by monitoring continous seismic data
+           to extract parameters τc and Pd from fast arriving P-wave. Alarm is raised when the predicted magnitude is above 5.5.
+           This fast, lightweight solution is ideal for robust deployment in the Himalyan region.
+            <a href="https://link.springer.com/chapter/10.1007/978-981-19-2600-6_19">[PAPER]</a>
+        </li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="padding:20px;width:75%;vertical-align:middle">
+      <a href="https://www.linkedin.com/company/kyrion-digital-securities/">
+        <papertitle>Kyrion Technologies</papertitle>
+      </a>
+      <br>
+      <strong>Android Developer Intern  </strong>,
+      <em>June 2019 - July 2019</em>
+      <ul>
+        <li> Developed an android application that tracks student attendance based on login through our web portal.
+             Google Maps api was used to verify student location at the workshop centre.
+             Each student's progress and specific certification program attendance was tracked.
+        </li>
+      </ul>
+    </td>
+  </tr>
 
 
 	<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
