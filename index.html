@@ -1,407 +1,382 @@
 <!DOCTYPE HTML>
-<html lang="en"><head>
-      <meta name="google-site-verification" content="mzyi5h_x1DvmnvvOynztP5h3mA2mdBpUjfhySMB9NNI" />
-      <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-NS48J6H');</script>
-      <!-- End Google Tag Manager -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arkadip Maitra</title>
+    <meta name="author" content="Arkadip Maitra">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-hover: #79c0ff;
+            --red: #ee5a5a;
+        }
 
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>Arkadip Maitra</title>
-      <meta name="author" content="Arkadip Maitra">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <link rel="stylesheet" type="text/css" href="stylesheet.css">
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-      <link rel="icon" href="assets/arka_pic.png">
-   </head>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        header {
+            margin-bottom: 48px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            padding: 6px 0;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .links a:hover {
+            color: var(--accent-hover);
+            border-bottom-color: var(--accent-hover);
+        }
+
+        section {
+            margin-bottom: 48px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .current-role {
+            font-size: 1.15rem;
+            color: var(--text);
+        }
+
+        .current-role strong {
+            color: var(--red);
+        }
+
+        .publication {
+            margin-bottom: 36px;
+            padding: 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .publication-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+
+        .publication-title a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .publication-title a:hover {
+            color: var(--accent);
+        }
+
+        .publication-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .publication-authors {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .publication-authors .me {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .publication-abstract {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .year-divider {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin: 32px 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .year-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 16px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .links {
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
 
 <body>
-  <table style="width:100%;max-width:1200px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Arkadip Maitra</name>
-              </p>
-              <p>I am a machine learning engineer at <a href="https://prediqt.it/">PrediQt</a>, Kolkata. I train and work with language and vision models that are used as virtual sales assistants for e-commerce applications.
-              I also work as a researcher at <a href="https://cs.rkmvu.ac.in/">Department of Computer Science, RKMVERI</a>, Belur. I work on sign language recognition and generation tasks.
+    <div class="container">
+        <header>
+            <h1>Arkadip Maitra</h1>
+            <div class="links">
+                <a href="https://github.com/arkadip-maitra/">GitHub</a>
+                <a href="https://scholar.google.com/citations?user=aZhddxIAAAAJ&hl=en">Google Scholar</a>
+                <a href="https://www.linkedin.com/in/arkadip-maitra/">LinkedIn</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Current</h2>
+            <p class="current-role">
+                I am currently working at <strong>Red Hat</strong>, developing <strong>PyTorch</strong>.
             </p>
-              <p style="text-align:center">
-                &nbsp|&nbsp <a href="mailto:arkadip@gmail.com"><img src="assets/envelope-solid.svg" alt="Icon" class="icon">Email</a> 
-                &nbsp|&nbsp &nbsp|&nbsp <a href="https://www.linkedin.com/in/arkadip-maitra/"><img src="assets/icons8-linkedin.svg" alt="Icon" class="icon">LinkedIn</a> &nbsp|&nbsp<br> <!--&nbsp/&nbsp-->
-                &nbsp|&nbsp <a href="assets/arkadip_resume_application.pdf"><img src="assets/file-solid.svg" alt="Icon" class="icon">CV</a> &nbsp|&nbsp
-	      <a href="https://github.com/arkadip-maitra/"><img src="assets/github.svg" alt="Icon" class="icon">Github</a> &nbsp|&nbsp <br>
-                &nbsp|&nbsp <a href="https://scholar.google.com/citations?user=aZhddxIAAAAJ&hl=en"><img src="assets/google-scholar.svg" alt="Icon" class="icon">Google Scholar</a> &nbsp|&nbsp
-              </p>
-	    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:2.5%;height:100px;vertical-align:middle;text-align:center">
-              <a href="assets/cropped-rkm-emblem-120x138.png"><img style="height:80px" alt="rkmveri photo" src="assets/cropped-rkm-emblem-120x138.png" class="hoverZoomLink"></a>
-            </td>
-	          <td style="padding:2.5%;height:100px;vertical-align:middle;text-align:center">
-              <a href="assets/isicallogo.png"><img style="height:80px" alt="isical photo" src="assets/isicallogo.png" class="hoverZoomLink"></a>
-            </td>
-            <td style="padding:2.5%;height:100px;vertical-align:middle;text-align:center">
-              <a href="assets/University_of_Calcutta_logo.png"><img style="height:80px" alt="isical photo" src="assets/University_of_Calcutta_logo.png" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="assets/arka_pic.png"><img style="width:80%;max-width:80%" alt="profile photo" src="assets/arka_pic.png" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Bio</heading>
-              <p>
-                I am a Sr. AI/ML Engineer at <a href="https://prediqt.it/">PrediQt</a>, Kolkata,
-                 where I work with multinational companies on development and use of language and vision models.
-                 I also work as a researcher at <a href="https://cs.rkmvu.ac.in/">Department of Computer Science, RKMVERI</a>, Belur. 
-                 I work on sign language recognition and generation with  <a href="https://www.linkedin.com/in/suvajit-patra"> Suvajit Patra</a>, 
-                 under the guidance of <a href="https://cs.rkmvu.ac.in/~soumitra/">Prof. Soumitra Samanta</a> 
-                 I have worked on self supervised learning and writer identification with <a href="https://sadimanna.github.io/">Siladittya Manna</a>, 
-                 Senior Research Assistant at the Department of Computer Science, Hong Kong Baptist University and
-		  <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a> and
-                  <a href="https://www.iitkgp.ac.in/department/EC/faculty/ec-saumik">Prof. Saumik Bhattacharya</a>. 
-                  I have also worked on earthquake early warning system under the guidance of <a href="https://sites.google.com/caluniv.ac.in/amlanc-org">Prof. Amlan Chakrabarti</a>, 
-                  Professor and Director, A.K. Choudhury School of Information Technology, University of Calcutta.
-                  I did my B.Sc in Computer Science from <a href="https://www.rkmvccrahara.org/">RKMVCC</a> and M.Sc in Computer Science from
-                   <a href="https://rkmvu.ac.in/">RKMVERI</a>.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
+        </section>
 
+        <section>
+            <h2>Previous Experience</h2>
+            <p>
+                I was a Sr. AI/ML Engineer at <a href="https://prediqt.it/">PrediQt</a>, Kolkata,
+                where I worked with multinational companies on development and use of language and vision models.
+                I also worked as a researcher at <a href="https://cs.rkmvu.ac.in/">Department of Computer Science, RKMVERI</a>, Belur,
+                on sign language recognition and generation with <a href="https://www.linkedin.com/in/suvajit-patra">Suvajit Patra</a>,
+                under the guidance of <a href="https://cs.rkmvu.ac.in/~soumitra/">Prof. Soumitra Samanta</a>.
+            </p>
+            <p>
+                I worked on self-supervised learning and writer identification with <a href="https://sadimanna.github.io/">Siladittya Manna</a>,
+                Senior Research Assistant at the Department of Computer Science, Hong Kong Baptist University,
+                <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>, and
+                <a href="https://www.iitkgp.ac.in/department/EC/faculty/ec-saumik">Prof. Saumik Bhattacharya</a>.
+            </p>
+            <p>
+                I also worked on earthquake early warning systems under the guidance of <a href="https://sites.google.com/caluniv.ac.in/amlanc-org">Prof. Amlan Chakrabarti</a>,
+                Professor and Director, A.K. Choudhury School of Information Technology, University of Calcutta.
+                I did my B.Sc in Computer Science from <a href="https://www.rkmvccrahara.org/">RKMVCC</a> and M.Sc in Computer Science from
+                <a href="https://rkmvu.ac.in/">RKMVERI</a>.
+            </p>
+        </section>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr>
-    <td style="padding:20px;width:100%;vertical-align:middle">
-      <heading>Publications</heading>
-    </td>
-  </tr>
-</tbody></table>
+        <section>
+            <h2>Publications</h2>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr>
-    <td style="padding:20px;width:100%;vertical-align:middle">
-      <heading>2024</heading>
-    </td>
-  </tr>
-</tbody></table>
-        
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <div class="year-divider">2024</div>
 
-<tr>
-    <td style="padding:20px;width:25%;vertical-align:middle">
-      <div class="one">
-        <img src='assets/model_overview.png' width="180">
-      </div>
-    </td>
-    <td style="padding:20px;width:75%;vertical-align:middle">
-      <a href="https://arxiv.org/abs/2407.14224">
-        <papertitle>Hierarchical Windowed Graph Attention Network and a Large Scale Dataset for Isolated Indian Sign Language Recognition</papertitle>
-      </a>
-      <br>
-      <a href="https://www.linkedin.com/in/suvajit-patra">Suvajit Patra</a>
-      <strong>Arkadip Maitra</strong>,
-      Megha Tiwari,
-      K. Kumaran,
-      Swathy Prabhu,
-      Swami Punyeshwarananda,
-      <a href="https://cs.rkmvu.ac.in/~soumitra/">Soumitra Samanta</a> <br>
-      <em>Under Review</em>
-      <br>
-      Multimedia Tools and Applications
-      <p></p>
-      <a href="https://arxiv.org/pdf/2407.14224"><span><i class="ai ai-arxiv"></i></span>arXiv</a><b>/</b>
-      <a href="https://github.com/arkadip-maitra/sl-hwgat"><span><i class="fa-solid fa-code"></i></span>Code</a><b>/</b>
-      <a href="https://cs.rkmvu.ac.in/~isl/">Demo</a><b></b>
-      <p></p>
-      <p>
-        Automatic Sign Language (SL) recognition is an important task in the computer vision community. 
-        To build a robust SL recognition system, we need a considerable amount
-        of data which is lacking particularly in Indian sign language (ISL). 
-        In this paper, we propose a large-scale isolated ISL dataset and a novel SL recognition model based
-        on skeleton graph structure. The dataset covers 2,002 daily used common words in the deaf community recorded
-        by 20 (10 male and 10 female) deaf adult signers (contains 40033 videos). We propose a SL recognition model
-        namely Hierarchical Windowed Graph Attention Network (HWGAT) by utilizing the human upper body skeleton graph
-        structure. The HWGAT tries to capture distinctive motions by giving attention to different body parts induced by the
-        human skeleton graph structure. The utility of the proposed dataset and the usefulness of our model are evaluated through extensive experiments. 
-        We pre-trained the proposed model on the proposed dataset and fine-tuned it across different sign language datasets further boosting
-        the performance of 1.10, 0.46, 0.78, and 6.84 percentage points on INCLUDE, LSA64, AUTSL and
-        WLASL respectively compared to the existing stateof-the-art skeleton-based models. The proposed dataset
-        and the model implementation  will be available at
-        https://cs.rkmvu.ac.in/~isl.
-      </p>
-    </td>
-  </tr>
+            <div class="publication">
+                <div class="publication-title">
+                    <a href="https://arxiv.org/abs/2407.14224">Hierarchical Windowed Graph Attention Network and a Large Scale Dataset for Isolated Indian Sign Language Recognition</a>
+                </div>
+                <div class="publication-meta">Multimedia Tools and Applications — Under Review</div>
+                <div class="publication-authors">
+                    Suvajit Patra, <span class="me">Arkadip Maitra</span>, Megha Tiwari, K. Kumaran, Swathy Prabhu, Swami Punyeshwarananda, Soumitra Samanta
+                </div>
+                <p class="publication-abstract">
+                    Automatic Sign Language (SL) recognition is an important task in the computer vision community.
+                    To build a robust SL recognition system, we need a considerable amount of data which is lacking particularly in Indian sign language (ISL).
+                    In this paper, we propose a large-scale isolated ISL dataset and a novel SL recognition model based on skeleton graph structure.
+                    The dataset covers 2,002 daily used common words in the deaf community recorded by 20 (10 male and 10 female) deaf adult signers (contains 40033 videos).
+                    We propose a SL recognition model namely Hierarchical Windowed Graph Attention Network (HWGAT) by utilizing the human upper body skeleton graph structure.
+                    The HWGAT tries to capture distinctive motions by giving attention to different body parts induced by the human skeleton graph structure.
+                    The utility of the proposed dataset and the usefulness of our model are evaluated through extensive experiments.
+                    We pre-trained the proposed model on the proposed dataset and fine-tuned it across different sign language datasets further boosting
+                    the performance of 1.10, 0.46, 0.78, and 6.84 percentage points on INCLUDE, LSA64, AUTSL and WLASL respectively compared to the existing state-of-the-art skeleton-based models.
+                </p>
+            </div>
 
-<tr>
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <img src='assets/model.png' width="180">
-        </div>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <papertitle>Decorrelation-based Self-Supervised Visual Representation Learning for Writer Identification</papertitle>
-        <br>
-        <strong>Arkadip Maitra</strong>,
-        Shree Mitra,
-        <a href="https://sadimanna.github.io/">Siladitya Manna</a>,
-        <a href="https://saumikb.github.io/">Saumik Bhattacharya</a>,
-        <a href="https://www.isical.ac.in/~umapada/">Umapada Pal</a>,
-        <br>
-        <em>Under Review</em>
-        <br>
-        Transactions on Asian and Low-Resource Language Information Processing
-        <p></p>
-	<a href="https://arxiv.org/pdf/2410.01441"><span><i class="ai ai-arxiv"></i></span>arXiv</a><b>/</b>
-        <a href="https://github.com/arkadip-maitra/DSSVR-for-writer-identification"><span><i class="fa-solid fa-code"></i></span>Code</a><b>/</b>
-        <p>
-          Self-supervised learning has developed rapidly over the last decade and has been applied in many areas of computer vision.
-          Decorrelation-based self-supervised pretraining has shown great promise among non-contrastive algorithms, yielding performance
-          at par with supervised and contrastive self-supervised baselines. In this work, we explore the decorrelation-based paradigm of self-
-          supervised learning and apply the same to learning disentangled stroke features for writer identification. Here we propose a modified
-          formulation of the decorrelation-based framework named SWIS which was proposed for signature verification by standardizing the
-          features along each dimension on top of the existing framework. We show that the proposed framework outperforms the contemporary
-          self-supervised learning framework on the writer identification benchmark and also outperforms several supervised methods as well.
-          To the best of our knowledge, this work is the first of its kind to apply self-supervised learning for learning representations for writer
-          verification tasks.
-        </p>
-      </td>
-    </tr>
+            <div class="publication">
+                <div class="publication-title">
+                    <a href="https://arxiv.org/pdf/2410.01441">Decorrelation-based Self-Supervised Visual Representation Learning for Writer Identification</a>
+                </div>
+                <div class="publication-meta">Transactions on Asian and Low-Resource Language Information Processing — Under Review</div>
+                <div class="publication-authors">
+                    <span class="me">Arkadip Maitra</span>, Shree Mitra, Siladitya Manna, Saumik Bhattacharya, Umapada Pal
+                </div>
+                <p class="publication-abstract">
+                    Self-supervised learning has developed rapidly over the last decade and has been applied in many areas of computer vision.
+                    Decorrelation-based self-supervised pretraining has shown great promise among non-contrastive algorithms, yielding performance
+                    at par with supervised and contrastive self-supervised baselines. In this work, we explore the decorrelation-based paradigm of self-supervised learning and apply the same to learning disentangled stroke features for writer identification.
+                    Here we propose a modified formulation of the decorrelation-based framework named SWIS which was proposed for signature verification by standardizing the
+                    features along each dimension on top of the existing framework. We show that the proposed framework outperforms the contemporary
+                    self-supervised learning framework on the writer identification benchmark and also outperforms several supervised methods as well.
+                    To the best of our knowledge, this work is the first of its kind to apply self-supervised learning for learning representations for writer verification tasks.
+                </p>
+            </div>
 
-    <tr>
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <img src='assets/eew.png' width="180">
-        </div>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <papertitle>Enhancing Earthquake Preparedness in the Himalayan Region: A Machine Learning Approach using EEW System Parameters</papertitle>
-        <br>
-	      Samik Basu,
-        Sayan Tripathi,
-        Soumen Halder,
-        <strong>Arkadip Maitra</strong>,
-        Pritha Banerjee,
-        <a href="https://sites.google.com/caluniv.ac.in/amlanc-org">Amlan Chakrabarti</a>,
-        <br>
-        <em>Under Review</em>
-        <br>
-        Iranian Journal of Science and Technology, Transactions of Electrical Engineering
-        <p></p>
-        <p>
-          Earthquakes universally pose threats and risks to all inhabitants of our planet. The
-          development of seismic sensors and earthquake alert systems stands as a crucial
-          endeavor for society. The inherent nonstationary nature of earthquake signals presents
-          a challenge in promptly identifying and classifying events using conventional methods
-          such as peak ground displacement and velocity in real-time scenarios. In this research
-          paper, we introduce an extraction method focused on first and rapidly (fast) arriving P-
-          wave signals, providing parameters for earthquake event characteristics, specifically
-          Pd and τc. These identified features serve as benchmarks for evaluating the efficiency
-          of various popular machine learning (ML) classifiers in triggering alarms for an
-          earthquake early warning system (EEW). Our paper introduces ensemble architectures
-          for classification purposes that outperform existing classifiers and even surpass some
-          established ensemble classifiers. A significant aspect of this study lies in the successful
-          implementation of our proposed machine learning model architecture on the PYNQ Z2
-          System on Chip (SoC) FPGA development board, enabling real-world deployment.
-          Leveraging the computational capacity of the PYNQ Z2 (SoC) FPGA board allows us
-          to analyze signals in terms of data points, facilitating the creation of a real-time alarm
-          triggering system.
-        </p>
-      </td>
-    </tr>
+            <div class="publication">
+                <div class="publication-title">
+                    Enhancing Earthquake Preparedness in the Himalayan Region: A Machine Learning Approach using EEW System Parameters
+                </div>
+                <div class="publication-meta">Iranian Journal of Science and Technology, Transactions of Electrical Engineering — Under Review</div>
+                <div class="publication-authors">
+                    Samik Basu, Sayan Tripathi, Soumen Halder, <span class="me">Arkadip Maitra</span>, Pritha Banerjee, Amlan Chakrabarti
+                </div>
+                <p class="publication-abstract">
+                    Earthquakes universally pose threats and risks to all inhabitants of our planet. The
+                    development of seismic sensors and earthquake alert systems stands as a crucial
+                    endeavor for society. The inherent nonstationary nature of earthquake signals presents
+                    a challenge in promptly identifying and classifying events using conventional methods
+                    such as peak ground displacement and velocity in real-time scenarios. In this research
+                    paper, we introduce an extraction method focused on first and rapidly (fast) arriving P-wave signals, providing parameters for earthquake event characteristics, specifically
+                    Pd and τc. These identified features serve as benchmarks for evaluating the efficiency
+                    of various popular machine learning (ML) classifiers in triggering alarms for an
+                    earthquake early warning system (EEW). Our paper introduces ensemble architectures
+                    for classification purposes that outperform existing classifiers and even surpass some
+                    established ensemble classifiers. A significant aspect of this study lies in the successful
+                    implementation of our proposed machine learning model architecture on the PYNQ Z2
+                    System on Chip (SoC) FPGA development board, enabling real-world deployment.
+                </p>
+            </div>
 
+            <div class="year-divider">2022</div>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>2022</heading>
-            </td>
-          </tr>
-        </tbody></table>
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-<tr>
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <img src='assets/flow.png' width="180">
-        </div>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://link.springer.com/chapter/10.1007/978-981-19-2600-6_19">
-          <papertitle>Machine Learning Based Earthquake Early Warning (EEW) System: A Case Study of Himalayan Region</papertitle>
-        </a>
-        <br>
-        <br>
-	      Samik Basu,
-        <strong>Arkadip Maitra</strong>,
-        Soumen Halder,
-        Soumya Pandit,
-        Soma Barman,
-        Pritha Banerjee,
-        <a href="https://sites.google.com/caluniv.ac.in/amlanc-org">Amlan Chakrabarti</a>,
-        <br>
-        <em>International Conference on Data Management, Analytics & Innovation (ICDMAI)</em>, 2022
-        <br>
-        <a href="https://link.springer.com/chapter/10.1007/978-981-19-2600-6_19"><span><i class="fas fa-scroll"></i></span>Paper</a><b>/</b>
-        <a href="https://github.com/arkadip-maitra/Earthquake-Early-Warning-System/"><span><i class="fa-solid fa-code"></i></span>Code</a>
-        <p></p>
-        <p>
-          Seismic sensing and generation of earthquake alarm is an important application for society at large. 
-          In this paper, we propose the strategy of extracting earthquake event features parameters τc and Pd from fast-arriving P-wave signals. 
-          The said features are used to explore the performances of some of the popular machine learning (ML) based classifiers to compare their 
-          performances in triggering an alarm for the Earthquake Early Warning (EEW) system. We explored four different ML classifiers namely 
-          Support Vector Machine (SVM), Naive Bayes, K-Nearest Neighbors (KNN), and Logistic Regression so that the best can be applied for the 
-          EEW alarm generation. We have used publicly available data from the PESMOS platform of IIT-Roorkee in this work.
-        </p>
-      </td>
-    </tr>
-		
-        </tbody></table>
+            <div class="publication">
+                <div class="publication-title">
+                    <a href="https://link.springer.com/chapter/10.1007/978-981-19-2600-6_19">Machine Learning Based Earthquake Early Warning (EEW) System: A Case Study of Himalayan Region</a>
+                </div>
+                <div class="publication-meta">International Conference on Data Management, Analytics & Innovation (ICDMAI), 2022</div>
+                <div class="publication-authors">
+                    Samik Basu, <span class="me">Arkadip Maitra</span>, Soumen Halder, Soumya Pandit, Soma Barman, Pritha Banerjee, Amlan Chakrabarti
+                </div>
+                <p class="publication-abstract">
+                    Seismic sensing and generation of earthquake alarm is an important application for society at large.
+                    In this paper, we propose the strategy of extracting earthquake event features parameters τc and Pd from fast-arriving P-wave signals.
+                    The said features are used to explore the performances of some of the popular machine learning (ML) based classifiers to compare their
+                    performances in triggering an alarm for the Earthquake Early Warning (EEW) system. We explored four different ML classifiers namely
+                    Support Vector Machine (SVM), Naive Bayes, K-Nearest Neighbors (KNN), and Logistic Regression so that the best can be applied for the
+                    EEW alarm generation. We have used publicly available data from the PESMOS platform of IIT-Roorkee in this work.
+                </p>
+            </div>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <heading>2019</heading>
-          </td>
-        </tr>
-      </tbody></table>
+            <div class="year-divider">2019–2020</div>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-<tr>
-    <td style="padding:20px;width:25%;vertical-align:middle">
-      <div class="one">
-        <img src='assets/car.png' width="180">
-      </div>
-    </td>
-    <td style="padding:20px;width:75%;vertical-align:middle">
-      <a href="https://www.researchgate.net/profile/Arkadip-Maitra/publication/356185900_An_Approach_for_Modelling_a_Common_Network_for_Autonomous_Vehicles/links/618f63cc07be5f31b775dec1/An-Approach-for-Modelling-a-Common-Network-for-Autonomous-Vehicles.pdf">
-        <papertitle>An Approach for Modelling a Common Network for Autonomous Vehicles</papertitle>
-      </a>
-      <br>
-      <br>
-      <strong>Arkadip Maitra</strong>
-      <br>
-      <em>Informatics for Society & Management: The Emergence</em>, 2020
-      <br>
-      <a href="https://www.researchgate.net/profile/Arkadip-Maitra/publication/356185900_An_Approach_for_Modelling_a_Common_Network_for_Autonomous_Vehicles/links/618f63cc07be5f31b775dec1/An-Approach-for-Modelling-a-Common-Network-for-Autonomous-Vehicles.pdf"><span><i class="fas fa-scroll"></i></span>Paper</a>
-      <p></p>
-      <p>
-        The rapid technological advancement in autonomous vehicles due to the 
-        development in the field of artificial intelligence as well as rapid improvement in 
-        computing hardware has led to immense improvement in self driving technology. 
-        The hardware that is being implemented alongside a human driver is already 
-        capable of self driving on highways. With the passage of time and the collection of 
-        more data by these systems Full Self Driving will soon be a reality. This paper 
-        explores an approach to modelling FSD and addresses the industry leading FSD version available. 
-        The disruption that will be caused by AVs will be very large. ARK Invest's 
-        research shows that the global autonomous MaaS market will exceed $10 trillion in gross revenue by the early 2030s. 
-        In the United States, ARK expects the MaaS market to reach over $700 billion in sales by 2030, or roughly 30 times the size of 
-        the taxi industry today. The global trucking industry is expected to exceed $6 trillion and AVs will dominate that market. 
-        So, the impact of AVs must be foreseen and this paper gives a model for designing an AV network such that it can be implemented in vast scales.
-      </p>
-    </td>
-  </tr>
+            <div class="publication">
+                <div class="publication-title">
+                    <a href="https://www.researchgate.net/profile/Arkadip-Maitra/publication/356185900_An_Approach_for_Modelling_a_Common_Network_for_Autonomous_Vehicles/links/618f63cc07be5f31b775dec1/An-Approach-for-Modelling-a-Common-Network-for-Autonomous-Vehicles.pdf">An Approach for Modelling a Common Network for Autonomous Vehicles</a>
+                </div>
+                <div class="publication-meta">Informatics for Society & Management: The Emergence, 2020</div>
+                <div class="publication-authors">
+                    <span class="me">Arkadip Maitra</span>
+                </div>
+                <p class="publication-abstract">
+                    The rapid technological advancement in autonomous vehicles due to the
+                    development in the field of artificial intelligence as well as rapid improvement in
+                    computing hardware has led to immense improvement in self driving technology.
+                    The hardware that is being implemented alongside a human driver is already
+                    capable of self driving on highways. With the passage of time and the collection of
+                    more data by these systems Full Self Driving will soon be a reality. This paper
+                    explores an approach to modelling FSD and addresses the industry leading FSD version available.
+                    The disruption that will be caused by AVs will be very large. In the United States, ARK expects the MaaS market to reach over $700 billion in sales by 2030.
+                    So, the impact of AVs must be foreseen and this paper gives a model for designing an AV network such that it can be implemented in vast scales.
+                </p>
+            </div>
 
-  <tr>
-    <td style="padding:20px;width:25%;vertical-align:middle">
-      <div class="one">
-        <img src='assets/brain.png' width="180">
-      </div>
-    </td>
-    <td style="padding:20px;width:75%;vertical-align:middle">
-      <a href="https://www.researchgate.net/profile/Arkadip-Maitra/publication/341041970_A_METHOD_FOR_AITIFACTS_REMOVED_FROM_MRI_OF_BRAIN/links/6331bae486b22d3db4e52b58/A-METHOD-FOR-AITIFACTS-REMOVED-FROM-MRI-OF-BRAIN.pdf">
-        <papertitle>A METHOD FOR ARTIFACTS REMOVED FROM MRI OF BRAIN</papertitle>
-      </a>
-      <br>
-      <br>
-      <strong>Arkadip Maitra</strong>
-      <br>
-      <em>EUROPEAN JOURNAL OF PHARMACEUTICAL AND MEDICAL RESEARCH</em>, 2019
-      <br>
-      <a href="https://www.researchgate.net/profile/Arkadip-Maitra/publication/341041970_A_METHOD_FOR_AITIFACTS_REMOVED_FROM_MRI_OF_BRAIN/links/6331bae486b22d3db4e52b58/A-METHOD-FOR-AITIFACTS-REMOVED-FROM-MRI-OF-BRAIN.pdf"><span><i class="fas fa-scroll"></i></span>Paper</a>
-      <p></p>
-      <p>
-        Improvement in detection and evaluation of brain abnormality and tissues detection is an important task in brain
-        image analysis. Diagnosis quality of brain MR of brain images hampered due to the presence of artifacts. Small
-        abnormalities detection hampered due to the presence of skull region of the brain.
-        Sometimes artifacts and skull have been treated as an abnormality in the automated system, and it hampers the intelligence system. Thus a
-        computerized method requires pre-processed image as artifacts and skull removal. Pre-processing makes the image
-        segmentation more accurate. In this paper, a pre-processing method for improvement of brain abnormality
-        detection and diagnosis has been presented.
-      </p>
-    </td>
-  </tr>
-  
-      </tbody></table>
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-        <td style="padding:20px;width:100%;vertical-align:middle">
-          <heading>Patents and Copyrights</heading>
-        </td>
-      </tr>
-    </tbody></table>
+            <div class="publication">
+                <div class="publication-title">
+                    <a href="https://www.researchgate.net/profile/Arkadip-Maitra/publication/341041970_A_METHOD_FOR_AITIFACTS_REMOVED_FROM_MRI_OF_BRAIN/links/6331bae486b22d3db4e52b58/A-METHOD-FOR-AITIFACTS-REMOVED-FROM-MRI-OF-BRAIN.pdf">A Method for Artifacts Removed from MRI of Brain</a>
+                </div>
+                <div class="publication-meta">European Journal of Pharmaceutical and Medical Research, 2019</div>
+                <div class="publication-authors">
+                    <span class="me">Arkadip Maitra</span>
+                </div>
+                <p class="publication-abstract">
+                    Improvement in detection and evaluation of brain abnormality and tissues detection is an important task in brain
+                    image analysis. Diagnosis quality of brain MR of brain images hampered due to the presence of artifacts. Small
+                    abnormalities detection hampered due to the presence of skull region of the brain.
+                    Sometimes artifacts and skull have been treated as an abnormality in the automated system, and it hampers the intelligence system. Thus a
+                    computerized method requires pre-processed image as artifacts and skull removal. Pre-processing makes the image
+                    segmentation more accurate. In this paper, a pre-processing method for improvement of brain abnormality
+                    detection and diagnosis has been presented.
+                </p>
+            </div>
+        </section>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-<tr>
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <img src='assets/copy.png' width="180" height="200">
+        <footer>
+            <p>Arkadip Maitra</p>
+        </footer>
     </div>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <a href="assets/Certificate_ROC.pdf">
-      <papertitle>A Novel Dataset for Earthquake Early Warning (EEW) Systems</papertitle>
-    </a>
-    <br>
-    <em>Copyright Office of India</em>, 2024 <br>
-    <a href="assets/Certificate_ROC.pdf"><span><i class="fas fa-scroll"></i></span>Certificate</a>
-    <br>
-    <p></p>
-    <p>
-      This abstract presents a pioneering dataset tailored explicitly for
-      Earthquake Early Warning (EEW) systems. This dataset comprises a diverse
-      collection of seismic data sourced from a network of sensors strategically
-      positioned across seismically active regions. The dataset is designed to address
-      existing research gaps by providing a standardized and openly accessible resource
-      for benchmarking, testing, and advancing EEW technologies. This novel EEW
-      dataset comprises multitudinous categories of earthquake early warning data,
-      including average period (τc), peak displacement (Pd) and magnitude and also
-      different earthquake centers information. The existing dataset has limited diversity
-      and size. In this work, we propose a novel dataset for EEW systems which contains
-      1050 samples regarding average period (τc), peak displacement (Pd) and
-      magnitude and also different earthquake centers information.
-    </p>
-  </td>
-</tr>
-
-    </tbody></table>
-  </tbody></table>
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr>
-      <td style="padding:0px">
-        <br>
-        <p style="text-align:right;font-size:small;">
-        Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source </a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics tags that you do not want on your own website &mdash; use the github  instead. Also, consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
-        </p>
-      </td>
-    </tr>
-  </tbody></table>
-</td>
-</tr>
-</table>
-
 </body>
-
 </html>
