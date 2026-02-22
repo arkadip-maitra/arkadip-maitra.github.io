@@ -101,22 +101,84 @@
             color: var(--red);
         }
 
-        .scholar-link {
-            display: inline-block;
-            padding: 10px 20px;
+        .publication {
+            margin-bottom: 20px;
+            padding: 16px;
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 8px;
-            color: var(--accent);
-            text-decoration: none;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.95rem;
-            transition: all 0.2s ease;
         }
 
-        .scholar-link:hover {
-            border-color: var(--accent);
-            color: var(--accent-hover);
+        .publication-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .publication-title a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .publication-title a:hover {
+            color: var(--accent);
+        }
+
+        .publication-venue {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 4px;
+        }
+
+        .publication-authors {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .publication-authors .me {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .publication-cite {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 6px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .year-divider {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin: 24px 0 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .year-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .scholar-footer {
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .scholar-footer a {
+            color: var(--accent);
+        }
+
+        #publications-loading {
+            color: var(--text-muted);
+            font-style: italic;
         }
 
         a {
@@ -185,14 +247,96 @@
 
         <section>
             <h2>Publications</h2>
-            <a class="scholar-link" href="https://scholar.google.com/citations?user=aZhddxIAAAAJ&hl=en" target="_blank">
-                View on Google Scholar &rarr;
-            </a>
+            <div id="publications-container">
+                <p id="publications-loading">Loading publications...</p>
+            </div>
+            <p class="scholar-footer">
+                Data from <a href="https://www.semanticscholar.org/author/2312202002" target="_blank">Semantic Scholar</a>
+                &middot; <a href="https://scholar.google.com/citations?user=aZhddxIAAAAJ&hl=en" target="_blank">Google Scholar</a>
+            </p>
         </section>
 
         <footer>
             <p>Arkadip Maitra</p>
         </footer>
     </div>
+
+    <script>
+    (function() {
+        const AUTHOR_ID = '2312202002';
+        const MY_NAME = 'Arkadip Maitra';
+        const API = 'https://api.semanticscholar.org/graph/v1/author/' + AUTHOR_ID +
+            '/papers?fields=title,year,venue,url,authors,citationCount&limit=50';
+
+        fetch(API)
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                var papers = data.data || [];
+                papers.sort(function(a, b) { return (b.year || 0) - (a.year || 0); });
+
+                var container = document.getElementById('publications-container');
+                container.innerHTML = '';
+
+                var currentYear = null;
+                papers.forEach(function(p) {
+                    if (p.year !== currentYear) {
+                        currentYear = p.year;
+                        var yd = document.createElement('div');
+                        yd.className = 'year-divider';
+                        yd.textContent = currentYear || 'Preprint';
+                        container.appendChild(yd);
+                    }
+
+                    var div = document.createElement('div');
+                    div.className = 'publication';
+
+                    var title = document.createElement('div');
+                    title.className = 'publication-title';
+                    if (p.url) {
+                        var a = document.createElement('a');
+                        a.href = p.url;
+                        a.target = '_blank';
+                        a.textContent = p.title;
+                        title.appendChild(a);
+                    } else {
+                        title.textContent = p.title;
+                    }
+                    div.appendChild(title);
+
+                    if (p.venue) {
+                        var venue = document.createElement('div');
+                        venue.className = 'publication-venue';
+                        venue.textContent = p.venue;
+                        div.appendChild(venue);
+                    }
+
+                    if (p.authors && p.authors.length) {
+                        var authors = document.createElement('div');
+                        authors.className = 'publication-authors';
+                        authors.innerHTML = p.authors.map(function(au) {
+                            var name = au.name.replace(/</g, '&lt;');
+                            return name === MY_NAME ? '<span class="me">' + name + '</span>' : name;
+                        }).join(', ');
+                        div.appendChild(authors);
+                    }
+
+                    if (p.citationCount > 0) {
+                        var cite = document.createElement('div');
+                        cite.className = 'publication-cite';
+                        cite.textContent = 'Cited by ' + p.citationCount;
+                        div.appendChild(cite);
+                    }
+
+                    container.appendChild(div);
+                });
+            })
+            .catch(function() {
+                document.getElementById('publications-container').innerHTML =
+                    '<p>Could not load publications. ' +
+                    '<a href="https://scholar.google.com/citations?user=aZhddxIAAAAJ&hl=en" target="_blank">' +
+                    'View on Google Scholar &rarr;</a></p>';
+            });
+    })();
+    </script>
 </body>
 </html>
