@@ -101,72 +101,6 @@
             color: var(--red);
         }
 
-        .publication {
-            margin-bottom: 36px;
-            padding: 20px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-        }
-
-        .publication-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 8px;
-        }
-
-        .publication-title a {
-            color: var(--text);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .publication-title a:hover {
-            color: var(--accent);
-        }
-
-        .publication-meta {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .publication-authors {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-        }
-
-        .publication-authors .me {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .publication-abstract {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .year-divider {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            color: var(--accent);
-            margin: 32px 0 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .year-divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--border);
-        }
-
         a {
             color: var(--accent);
         }
@@ -214,164 +148,36 @@
         <section>
             <h2>Current</h2>
             <p class="current-role">
-                I am currently working at <strong>Red Hat</strong>, developing <strong>PyTorch</strong>.
+                Currently working at <strong>Red Hat</strong>, developing <strong>PyTorch</strong>.
+            </p>
+            <h2>Previous</h2>
+            <p class="previous-role">
+                Previously worked at <strong>Rezolve AI</strong>, making <strong>agents for e-commerce applications</strong>.
             </p>
         </section>
 
         <section>
-            <h2>Previous Experience</h2>
-            <p>
-                I was a Sr. AI/ML Engineer at <a href="https://prediqt.it/">PrediQt</a>, Kolkata,
-                where I worked with multinational companies on development and use of language and vision models.
-                I also worked as a researcher at <a href="https://cs.rkmvu.ac.in/">Department of Computer Science, RKMVERI</a>, Belur,
-                on sign language recognition and generation with <a href="https://www.linkedin.com/in/suvajit-patra">Suvajit Patra</a>,
-                under the guidance of <a href="https://cs.rkmvu.ac.in/~soumitra/">Prof. Soumitra Samanta</a>.
-            </p>
-            <p>
-                I worked on self-supervised learning and writer identification with <a href="https://sadimanna.github.io/">Siladittya Manna</a>,
-                Senior Research Assistant at the Department of Computer Science, Hong Kong Baptist University,
-                <a href="https://www.isical.ac.in/~umapada/">Prof. Umapada Pal</a>, and
-                <a href="https://www.iitkgp.ac.in/department/EC/faculty/ec-saumik">Prof. Saumik Bhattacharya</a>.
-            </p>
-            <p>
-                I also worked on earthquake early warning systems under the guidance of <a href="https://sites.google.com/caluniv.ac.in/amlanc-org">Prof. Amlan Chakrabarti</a>,
-                Professor and Director, A.K. Choudhury School of Information Technology, University of Calcutta.
-                I did my B.Sc in Computer Science from <a href="https://www.rkmvccrahara.org/">RKMVCC</a> and M.Sc in Computer Science from
-                <a href="https://rkmvu.ac.in/">RKMVERI</a>.
+            <h2>Research Areas</h2>
+            <p class="research-areas">
+                Sign language generation and recognition.
+                PyTorch Distributed.
+                Agents for humanitarian apploications.
             </p>
         </section>
 
         <section>
             <h2>Publications</h2>
-
-            <div class="year-divider">2024</div>
-
-            <div class="publication">
-                <div class="publication-title">
-                    <a href="https://arxiv.org/abs/2407.14224">Hierarchical Windowed Graph Attention Network and a Large Scale Dataset for Isolated Indian Sign Language Recognition</a>
-                </div>
-                <div class="publication-meta">Multimedia Tools and Applications — Under Review</div>
-                <div class="publication-authors">
-                    Suvajit Patra, <span class="me">Arkadip Maitra</span>, Megha Tiwari, K. Kumaran, Swathy Prabhu, Swami Punyeshwarananda, Soumitra Samanta
-                </div>
-                <p class="publication-abstract">
-                    Automatic Sign Language (SL) recognition is an important task in the computer vision community.
-                    To build a robust SL recognition system, we need a considerable amount of data which is lacking particularly in Indian sign language (ISL).
-                    In this paper, we propose a large-scale isolated ISL dataset and a novel SL recognition model based on skeleton graph structure.
-                    The dataset covers 2,002 daily used common words in the deaf community recorded by 20 (10 male and 10 female) deaf adult signers (contains 40033 videos).
-                    We propose a SL recognition model namely Hierarchical Windowed Graph Attention Network (HWGAT) by utilizing the human upper body skeleton graph structure.
-                    The HWGAT tries to capture distinctive motions by giving attention to different body parts induced by the human skeleton graph structure.
-                    The utility of the proposed dataset and the usefulness of our model are evaluated through extensive experiments.
-                    We pre-trained the proposed model on the proposed dataset and fine-tuned it across different sign language datasets further boosting
-                    the performance of 1.10, 0.46, 0.78, and 6.84 percentage points on INCLUDE, LSA64, AUTSL and WLASL respectively compared to the existing state-of-the-art skeleton-based models.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="publication-title">
-                    <a href="https://arxiv.org/pdf/2410.01441">Decorrelation-based Self-Supervised Visual Representation Learning for Writer Identification</a>
-                </div>
-                <div class="publication-meta">Transactions on Asian and Low-Resource Language Information Processing — Under Review</div>
-                <div class="publication-authors">
-                    <span class="me">Arkadip Maitra</span>, Shree Mitra, Siladitya Manna, Saumik Bhattacharya, Umapada Pal
-                </div>
-                <p class="publication-abstract">
-                    Self-supervised learning has developed rapidly over the last decade and has been applied in many areas of computer vision.
-                    Decorrelation-based self-supervised pretraining has shown great promise among non-contrastive algorithms, yielding performance
-                    at par with supervised and contrastive self-supervised baselines. In this work, we explore the decorrelation-based paradigm of self-supervised learning and apply the same to learning disentangled stroke features for writer identification.
-                    Here we propose a modified formulation of the decorrelation-based framework named SWIS which was proposed for signature verification by standardizing the
-                    features along each dimension on top of the existing framework. We show that the proposed framework outperforms the contemporary
-                    self-supervised learning framework on the writer identification benchmark and also outperforms several supervised methods as well.
-                    To the best of our knowledge, this work is the first of its kind to apply self-supervised learning for learning representations for writer verification tasks.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="publication-title">
-                    Enhancing Earthquake Preparedness in the Himalayan Region: A Machine Learning Approach using EEW System Parameters
-                </div>
-                <div class="publication-meta">Iranian Journal of Science and Technology, Transactions of Electrical Engineering — Under Review</div>
-                <div class="publication-authors">
-                    Samik Basu, Sayan Tripathi, Soumen Halder, <span class="me">Arkadip Maitra</span>, Pritha Banerjee, Amlan Chakrabarti
-                </div>
-                <p class="publication-abstract">
-                    Earthquakes universally pose threats and risks to all inhabitants of our planet. The
-                    development of seismic sensors and earthquake alert systems stands as a crucial
-                    endeavor for society. The inherent nonstationary nature of earthquake signals presents
-                    a challenge in promptly identifying and classifying events using conventional methods
-                    such as peak ground displacement and velocity in real-time scenarios. In this research
-                    paper, we introduce an extraction method focused on first and rapidly (fast) arriving P-wave signals, providing parameters for earthquake event characteristics, specifically
-                    Pd and τc. These identified features serve as benchmarks for evaluating the efficiency
-                    of various popular machine learning (ML) classifiers in triggering alarms for an
-                    earthquake early warning system (EEW). Our paper introduces ensemble architectures
-                    for classification purposes that outperform existing classifiers and even surpass some
-                    established ensemble classifiers. A significant aspect of this study lies in the successful
-                    implementation of our proposed machine learning model architecture on the PYNQ Z2
-                    System on Chip (SoC) FPGA development board, enabling real-world deployment.
-                </p>
-            </div>
-
-            <div class="year-divider">2022</div>
-
-            <div class="publication">
-                <div class="publication-title">
-                    <a href="https://link.springer.com/chapter/10.1007/978-981-19-2600-6_19">Machine Learning Based Earthquake Early Warning (EEW) System: A Case Study of Himalayan Region</a>
-                </div>
-                <div class="publication-meta">International Conference on Data Management, Analytics & Innovation (ICDMAI), 2022</div>
-                <div class="publication-authors">
-                    Samik Basu, <span class="me">Arkadip Maitra</span>, Soumen Halder, Soumya Pandit, Soma Barman, Pritha Banerjee, Amlan Chakrabarti
-                </div>
-                <p class="publication-abstract">
-                    Seismic sensing and generation of earthquake alarm is an important application for society at large.
-                    In this paper, we propose the strategy of extracting earthquake event features parameters τc and Pd from fast-arriving P-wave signals.
-                    The said features are used to explore the performances of some of the popular machine learning (ML) based classifiers to compare their
-                    performances in triggering an alarm for the Earthquake Early Warning (EEW) system. We explored four different ML classifiers namely
-                    Support Vector Machine (SVM), Naive Bayes, K-Nearest Neighbors (KNN), and Logistic Regression so that the best can be applied for the
-                    EEW alarm generation. We have used publicly available data from the PESMOS platform of IIT-Roorkee in this work.
-                </p>
-            </div>
-
-            <div class="year-divider">2019–2020</div>
-
-            <div class="publication">
-                <div class="publication-title">
-                    <a href="https://www.researchgate.net/profile/Arkadip-Maitra/publication/356185900_An_Approach_for_Modelling_a_Common_Network_for_Autonomous_Vehicles/links/618f63cc07be5f31b775dec1/An-Approach-for-Modelling-a-Common-Network-for-Autonomous-Vehicles.pdf">An Approach for Modelling a Common Network for Autonomous Vehicles</a>
-                </div>
-                <div class="publication-meta">Informatics for Society & Management: The Emergence, 2020</div>
-                <div class="publication-authors">
-                    <span class="me">Arkadip Maitra</span>
-                </div>
-                <p class="publication-abstract">
-                    The rapid technological advancement in autonomous vehicles due to the
-                    development in the field of artificial intelligence as well as rapid improvement in
-                    computing hardware has led to immense improvement in self driving technology.
-                    The hardware that is being implemented alongside a human driver is already
-                    capable of self driving on highways. With the passage of time and the collection of
-                    more data by these systems Full Self Driving will soon be a reality. This paper
-                    explores an approach to modelling FSD and addresses the industry leading FSD version available.
-                    The disruption that will be caused by AVs will be very large. In the United States, ARK expects the MaaS market to reach over $700 billion in sales by 2030.
-                    So, the impact of AVs must be foreseen and this paper gives a model for designing an AV network such that it can be implemented in vast scales.
-                </p>
-            </div>
-
-            <div class="publication">
-                <div class="publication-title">
-                    <a href="https://www.researchgate.net/profile/Arkadip-Maitra/publication/341041970_A_METHOD_FOR_AITIFACTS_REMOVED_FROM_MRI_OF_BRAIN/links/6331bae486b22d3db4e52b58/A-METHOD-FOR-AITIFACTS-REMOVED-FROM-MRI-OF-BRAIN.pdf">A Method for Artifacts Removed from MRI of Brain</a>
-                </div>
-                <div class="publication-meta">European Journal of Pharmaceutical and Medical Research, 2019</div>
-                <div class="publication-authors">
-                    <span class="me">Arkadip Maitra</span>
-                </div>
-                <p class="publication-abstract">
-                    Improvement in detection and evaluation of brain abnormality and tissues detection is an important task in brain
-                    image analysis. Diagnosis quality of brain MR of brain images hampered due to the presence of artifacts. Small
-                    abnormalities detection hampered due to the presence of skull region of the brain.
-                    Sometimes artifacts and skull have been treated as an abnormality in the automated system, and it hampers the intelligence system. Thus a
-                    computerized method requires pre-processed image as artifacts and skull removal. Pre-processing makes the image
-                    segmentation more accurate. In this paper, a pre-processing method for improvement of brain abnormality
-                    detection and diagnosis has been presented.
-                </p>
-            </div>
+            <p style="margin-bottom: 8px;">
+                <a href="https://scholar.google.com/citations?user=aZhddxIAAAAJ&hl=en" target="_blank">View on Google Scholar</a>
+            </p>
+            <iframe
+                src="https://scholar.google.com/citations?user=aZhddxIAAAAJ&hl=en"
+                width="100%"
+                height="400"
+                style="border: 1px solid #ddd; border-radius: 6px;"
+                loading="lazy"
+                referrerpolicy="no-referrer">
+            </iframe>
         </section>
 
         <footer>
