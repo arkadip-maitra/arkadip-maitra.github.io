@@ -116,6 +116,19 @@
             color: var(--accent-hover);
         }
 
+        .pub-entry {
+            margin-bottom: 14px;
+        }
+
+        .pub-title {
+            font-weight: 600;
+        }
+
+        .pub-venue {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
         .cat-gif {
             margin-top: 40px;
             text-align: center;
@@ -159,9 +172,10 @@
         <header>
             <h1>Arkadip Maitra</h1>
             <div class="links">
-                <a href="https://github.com/arkadip-maitra/">GitHub</a>
-                <a href="https://scholar.google.com/citations?user=aZhddxIAAAAJ&hl=en">Google Scholar</a>
-                <a href="https://www.linkedin.com/in/arkadip-maitra/">LinkedIn</a>
+                <a href="https://github.com/arkadip-maitra/" target="_blank">GitHub</a>
+                <a href="https://scholar.google.com/citations?user=aZhddxIAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                <a href="https://www.linkedin.com/in/arkadip-maitra/" target="_blank">LinkedIn</a>
+                <a href="https://x.com/arkadipmaitra" target="_blank">X / Twitter</a>
             </div>
             <p class="contact-note">Reach out: arkadipmaitra at gmail dot com</p>
         </header>
@@ -169,22 +183,66 @@
         <section>
             <h2>Current</h2>
             <p class="current-role">
-                Currently working at Red Hat, for the PyTorch Engineering Team.
-            </p>
-            <h2>Previous</h2>
-            <p class="previous-role">
-                Previously worked at Rezolve AI, building agents for e-commerce applications.
+                Working on distributed AI systems at Red Hat, contributing upstream to the PyTorch ecosystem. The work spans multi-node communication, training correctness, on-device inference, and research in computer vision and sign language.
             </p>
         </section>
 
         <section>
-            <h2>Research Areas</h2>
-            <p class="research-areas">
-                <ul>
-                    <li>Sign Language</li>
-                    <li>Distributed Systems</li>
-                    <li>AI for Social Good</li>
-                </ul>
+            <h2>Work</h2>
+            <p>
+                Distributed training and communication form the core focus — fixing correctness and reliability issues in collective operations, transport layers, and multi-backend coordination for large-scale GPU clusters. This includes work on failure-path determinism, lifecycle management, and making communication behave predictably across hardware topologies.
+            </p>
+            <p>
+                On-device and edge inference work involves extending operator coverage, fixing kernel correctness, and improving build-system plumbing for selective compilation on resource-constrained targets.
+            </p>
+            <p>
+                Inference diagnostics and tooling contributions center on building source-level tracing and adapter infrastructure that enables any framework built on PyTorch to expose its internal call paths for debugging and profiling.
+            </p>
+            <p>
+                Developer tooling and framework integration work includes compiler interactions with distributed subsystems, autograd correctness for tensor subclasses, and improving error messages to surface real problems faster.
+            </p>
+        </section>
+
+        <section>
+            <h2>Publications</h2>
+            <div class="pub-entry">
+                <span class="pub-title">A Gloss-driven Indian Sign Language Production System using Learned Pose Representations.</span>
+                <span class="pub-venue">International Joint Conference on Artificial Intelligence (IJCAI-ECAI), 2026.</span>
+            </div>
+            <div class="pub-entry">
+                <span class="pub-title">MSBAD at SignEval 2026: Multi-Scale Born-Again Distillation Ensemble for Radar-Based Sign Language Recognition.</span>
+                <span class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops, 2026.</span>
+            </div>
+            <div class="pub-entry">
+                <span class="pub-title">RAVEN: A Rapid Agentic Vision Framework for Emergency Response in Vulnerable Settlements.</span>
+                <span class="pub-venue">IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops, 2026.</span>
+            </div>
+            <div class="pub-entry">
+                <span class="pub-title">Enhancing Earthquake Preparedness in the Himalayan Region: A Machine Learning Approach using EEW System Parameters.</span>
+                <span class="pub-venue">Iranian Journal of Science and Technology, Transactions of Electrical Engineering, 2026.</span>
+            </div>
+            <div class="pub-entry">
+                <span class="pub-title">Hierarchical Windowed Graph Attention Transformer Encoder and a Large Scale Dataset for Indian Sign Language Recognition.</span>
+                <span class="pub-venue">Pattern Analysis and Applications, 2025.</span>
+            </div>
+            <div class="pub-entry">
+                <span class="pub-title">Decorrelation-Based Self-Supervised Visual Representation Learning for Writer Identification.</span>
+                <span class="pub-venue">ACM Transactions on Asian and Low-Resource Language Information Processing, 2025.</span>
+            </div>
+            <div class="pub-entry">
+                <span class="pub-title">A Continuous Indian Sign Language Production System from Isolated Signs.</span>
+                <span class="pub-venue">International Conference on Smart Computing and Communications (ICSCC), 2025.</span>
+            </div>
+            <div class="pub-entry">
+                <span class="pub-title">Edge-Based Intelligent and Smart Health Monitoring on PYNQ-Z2 using Lightweight Protocol and Integration of Machine Learning Models.</span>
+                <span class="pub-venue">International Journal on Smart Sensing and Intelligent Systems, 2025.</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Community</h2>
+            <p>
+                Active in technical reviewing for journals and certification programs, conference program committee work, mentoring at hackathons, giving talks at meetups and universities on distributed systems and PyTorch internals, and published technical writing on distributed communication infrastructure.
             </p>
         </section>
 
@@ -194,6 +252,10 @@
                 alt="Three cats breakdancing in sync"
             >
         </div>
+
+        <footer>
+            <p>Arkadip Maitra</p>
+        </footer>
     </div>
 
 </body>
