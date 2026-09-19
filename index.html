@@ -182,7 +182,7 @@
             gap: 16px;
         }
 
-        .primary-card, .detail-card, .research-statement, .publication-list, .community-copy {
+        .primary-card, .detail-card, .research-statement, .publication-list, .upcoming-list, .community-copy {
             border: 1px solid var(--line);
             border-radius: 8px;
             background: var(--surface);
@@ -261,6 +261,34 @@
 
         .pub-venue { margin-bottom: 0; color: var(--muted); font-size: .72rem; line-height: 1.5; }
 
+        .upcoming-list {
+            max-width: 885px;
+            margin-left: 189px;
+            overflow: hidden;
+        }
+
+        .upcoming-item {
+            display: grid;
+            grid-template-columns: 128px minmax(0, 1fr);
+            gap: 20px;
+            padding: 25px 28px;
+        }
+
+        .upcoming-item + .upcoming-item { border-top: 1px solid var(--line); }
+
+        .upcoming-date, .upcoming-status {
+            font-family: "DM Mono", ui-monospace, monospace;
+            font-size: .72rem;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+        }
+
+        .upcoming-date { margin-bottom: 7px; color: var(--signal); }
+        .upcoming-status { margin-bottom: 0; color: var(--faint); }
+        .upcoming-title { margin-bottom: 7px; color: var(--ink); font-size: 1rem; font-weight: 600; letter-spacing: -.018em; line-height: 1.45; }
+        .upcoming-meta { margin-bottom: 0; color: var(--muted); font-size: .9rem; line-height: 1.55; }
+        .upcoming-meta a { color: var(--signal); text-underline-offset: 3px; }
+
         .community-copy {
             max-width: 885px;
             margin-left: 189px;
@@ -307,14 +335,15 @@
             .primary-card { min-height: auto; gap: 54px; padding: 30px; }
             .research-statement, .publication-list { grid-column: 1; }
             .research-statement { margin-bottom: 0; padding: 27px; }
-            .community-copy { margin-left: 0; padding: 28px; }
+            .upcoming-list, .community-copy { margin-left: 0; }
+            .community-copy { padding: 28px; }
             .contact { align-items: flex-start; flex-direction: column; padding-top: 68px; }
             .contact-note { white-space: normal; }
             footer { flex-direction: column; gap: 8px; }
         }
 
         @media (max-width: 480px) {
-            .publication { grid-template-columns: 1fr; gap: 8px; padding: 22px; }
+            .publication, .upcoming-item { grid-template-columns: 1fr; gap: 8px; padding: 22px; }
             .primary-card, .detail-card { padding: 24px; }
         }
     </style>
@@ -401,9 +430,41 @@
             </div>
         </section>
 
+        <section aria-labelledby="upcoming-title">
+            <div class="section-heading">
+                <p class="section-number">03 / Upcoming</p>
+                <div>
+                    <h2 id="upcoming-title">Work I’m bringing to the community next.</h2>
+                    <p class="section-intro">Accepted presentations and other forthcoming technical activity. This is kept deliberately small so meaningful updates remain easy to find.</p>
+                </div>
+            </div>
+            <div class="upcoming-list" aria-label="Upcoming activity">
+                <article class="upcoming-item">
+                    <div>
+                        <p class="upcoming-date">October 2026</p>
+                        <p class="upcoming-status">Accepted poster</p>
+                    </div>
+                    <div>
+                        <p class="upcoming-title">Portable Diagnostics for LLM Inference on vLLM and llm-d</p>
+                        <p class="upcoming-meta">PyTorch Conference North America 2026 Community Expo. <a href="https://events.linuxfoundation.org/pytorch-conference-north-america/program/schedule-posters/?id=1291386" target="_blank" rel="noreferrer">Conference listing</a></p>
+                    </div>
+                </article>
+                <article class="upcoming-item">
+                    <div>
+                        <p class="upcoming-date">October 2026</p>
+                        <p class="upcoming-status">Accepted poster</p>
+                    </div>
+                    <div>
+                        <p class="upcoming-title">Accelerating Modern Attention Kernels with Triton-TLE</p>
+                        <p class="upcoming-meta">PyTorch Conference North America 2026 Community Expo. <a href="https://sessionize.com/pytorch-conference-north-america-2026-posters/" target="_blank" rel="noreferrer">Conference listing</a></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <section aria-labelledby="community-title">
             <div class="section-heading">
-                <p class="section-number">03 / Community</p>
+                <p class="section-number">04 / Community</p>
                 <div><h2 id="community-title">Contributing in public and making systems work understandable.</h2></div>
             </div>
             <div class="community-copy">
